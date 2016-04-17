@@ -1,4 +1,4 @@
-activator-akka-scala-seed
+Akka Concurrency Examples
 =========================
 
 A walkthrough "Akka Concurrency" book examples.
