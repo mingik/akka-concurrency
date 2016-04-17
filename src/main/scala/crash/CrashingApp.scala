@@ -9,5 +9,12 @@ object CrashingApp extends App {
   val system = ActorSystem()
   val supervisorActor = system.actorOf(SupervisorActor.props)
   supervisorActor ! SupervisorActor.Init
-  system.awaitTermination()
+
+  supervisorActor ! SupervisorActor.Init
+
+  supervisorActor ! SupervisorActor.Status
+
+  Thread.sleep(2000)
+
+  system.shutdown()
 }
